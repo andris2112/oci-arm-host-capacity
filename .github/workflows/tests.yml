@@ -8,8 +8,8 @@ on:
     branches:
       - main
 
-#  schedule:
-#    - cron: '*/10 * * * *'
+  schedule:
+    - cron: '*/5 * * * *'
 
 jobs:
   tests:
@@ -61,6 +61,3 @@ jobs:
           TELEGRAM_USER_ID: ${{ secrets.TELEGRAM_USER_ID }}
           TELEGRAM_BOT_API_KEY: ${{ secrets.TELEGRAM_BOT_API_KEY }}
 
-      - name: Run script
-        run: |
-          php index.php
